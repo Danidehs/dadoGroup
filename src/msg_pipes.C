@@ -11,10 +11,10 @@ int main(int argc, char *argv[]) {
 
 std::map<string, string> data {{"send", "Test"}, {"info", "One"}, {"stop", "Kill"}, {"info", ""}};
 
-//for(auto item: data) {
-                 // Key                  //Value
-    // std::cout << item.first << " : " << item.second << "\n";
-//}
+	//for(auto item: data) {
+					// Key                  //Value
+		// std::cout << item.first << " : " << item.second << "\n";
+	//}
 
 	int tuberia[2];	//Descriptor de la tubería
 	//tuberia[0] descriptor de lectura

@@ -221,17 +221,15 @@ main(int argc, char *argv[]) {
   automatas& inv = parserAutomatasFile(argv[1]);
   readParser(inv);
   readMessage();
-  cout << m["cmd"] << endl;
-  cout << m["msg"] << endl;
   pthread_t hiloAutomatas[ats.size()];
   for(int i=0;i<ats.size();i++) // loop will run n times (n=5) 
-    { 
-      if(pthread_create(&hiloAutomatas[i],NULL,checkStates,NULL) != 0) {
-        cerr << "No se pudo crear hilo: " << errno << endl;
-      _exit(1); 
-      }
-      //pthread_join(hiloAutomatas[i], 0);
+  { 
+    if(pthread_create(&hiloAutomatas[i],NULL,checkStates,NULL) != 0) {
+      cerr << "No se pudo crear hilo: " << errno << endl;
+    _exit(1); 
     }
+    //pthread_join(hiloAutomatas[i], 0);
+  }
   for (int i=0;i<ats.size();i++) {
     pthread_join(hiloAutomatas[i], NULL);
   } 
