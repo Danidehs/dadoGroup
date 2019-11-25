@@ -254,7 +254,7 @@ main(int argc, char *argv[]) {
   readParser(inv);
   readMessage();
   pthread_t hiloAutomatas[ats.size()];
-  for(int i=0;i<ats.size();i++) // loop will run n times (n=5) 
+  for(int i=0;i<ats.size();i++) 
   { 
     if(pthread_create(&hiloAutomatas[i],NULL,checkStates,NULL) != 0) {
       cerr << "No se pudo crear hilo: " << errno << endl;
