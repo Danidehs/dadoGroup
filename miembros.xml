@@ -1,0 +1,16 @@
+<grupo>
+    <nombre>dadoGroup</nombre>
+    <repositorio>https://github.com/Danidehs/dadoGroup</repositorio>
+    <miembro>
+        <nombre>Daniel Enrique Hernandez Stalhuth</nombre>
+        <codigo>201717502010</codigo>
+        <grupo>031</grupo>
+        <email>dehernands@eafit.edu.co</email>
+    </miembro>
+    <miembro>
+        <nombre>Ricardo Ocampo Castro</nombre>
+        <codigo>201429100010</codigo>
+        <grupo>031</grupo>
+        <email>rocampo3@eafit.edu.co</email>
+    </miembro>
+</grupo>
