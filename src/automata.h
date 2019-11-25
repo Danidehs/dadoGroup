@@ -51,7 +51,7 @@ class automata {
   vector<string> getAlpha() const;
   vector<string> getStates() const;
   vector<string> getFinal() const;
-  int getId() const;
+  string& getId() const;
   string& getDescription() const;
   string& getStart() const;
   void setDescription(string& description);
@@ -61,7 +61,7 @@ class automata {
   void setStates(vector<string> states);
   void setFinal(vector<string> final);
  private:
-  int id;
+  string id;
   string description;
   string start;
   delta_t delta;

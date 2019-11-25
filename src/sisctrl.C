@@ -167,10 +167,11 @@ void mensajesUsuario(string cmd, string msg){
   } else if (cmd == "info"){
     
     for(int i=0;i<ats.size();i++){
-      cout << ats.at(i).description << endl;
-      if (msg == ats.at(i).description){
+      //cout << ats.at(i).id << endl;
+      //cout << "hola" << endl;
+      if (msg == ats.at(i).id){
 
-        
+        cout << "gooooooooooooooooooooooola" << endl;
 
         
 

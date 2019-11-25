@@ -14,7 +14,7 @@ class delts {
 
 class automat {
  public:
-  int id;
+  string id;
   string description;
   vector<string>  aplha;
   vector<string> states;

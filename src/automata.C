@@ -47,7 +47,7 @@ void delt::setNodes(string& nodes) {
 }
 
 automata::automata() 
-  : id(0), delta() { }
+  : delta() { }
 
 automata::~automata() {
 }
@@ -61,9 +61,9 @@ automata::getDescription() const {
   return *(new string(this->description));
 }
 
-int
+string&
 automata::getId() const {
-  return this->id;
+  return *(new string(this->id));
 }
 
 vector<string>
@@ -115,8 +115,5 @@ void automata::setFinal(vector<string> final) {
 }
 
 void automata::setId(string& id) {
-  istringstream in(id);
-  int val;
-  in >> val;
-  this->id = val;
+  this->id = id;
 }

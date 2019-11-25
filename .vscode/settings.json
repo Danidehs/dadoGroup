@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "sisctrl.C": "cpp",
-        "msg_pipes.C": "cpp"
+        "msg_pipes.C": "cpp",
+        "automata.C": "cpp"
     }
 }

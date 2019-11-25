@@ -1,5 +1,5 @@
 // Comandos de lectura
-{ cmd: info, msg: "First automata" }
+{ cmd: info, msg: "One" }
 
 
 // ASIGNA LA PATH DE LA LIBRERIA PARA YAML

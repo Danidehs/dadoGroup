@@ -1,4 +1,4 @@
-- automata: 1
+- automata: One
   description: "First automata"
   alpha: [a,b,c]
   states: [A,B,C]
@@ -22,7 +22,7 @@
     - node: C
       trans:
 
-- automata: 2
+- automata: Two
   description: "Second automata"
   alpha: [aa,bb,cc]
   states: [A,B]
@@ -44,7 +44,7 @@
         - in: bb
           next: A
 
-- automata: 3
+- automata: Three
   description: "third automata"
   alpha: [aa,bb,cc]
   states: [A,B]
