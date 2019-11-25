@@ -1,0 +1,20 @@
+// Comandos de lectura
+{ cmd: info, msg: "First automata" }
+
+
+// ASIGNA LA PATH DE LA LIBRERIA PARA YAML
+
+(1).
+$ echo $LD_LIBRARY_PATH
+if there is nothing to be displayed, add a default path value (or not if you wish to)
+
+(2).
+$ LD_LIBRARY_PATH=/usr/local/lib
+ We add the desire path, export it and try the application.
+
+(3).
+Note that the path should be the directory where the path.so.something is. 
+So if path.so.something is in /my_library/path.so.something it should be :
+$ LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/my_library/
+$ export LD_LIBRARY_PATH
+$ ./my_app
