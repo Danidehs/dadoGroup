@@ -54,6 +54,7 @@ class automata {
   string& getId() const;
   string& getDescription() const;
   string& getStart() const;
+  
   void setDescription(string& description);
   void setStart(string& start);
   void setId(string& id);

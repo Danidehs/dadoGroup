@@ -14,6 +14,7 @@ class delts {
 
 class automat {
  public:
+  pid_t pid;
   string id;
   string description;
   vector<string>  aplha;

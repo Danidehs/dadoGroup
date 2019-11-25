@@ -23,6 +23,7 @@ int y;
 sem_t mutex;
 map<string, string> m;
 map<string, string> msg;
+map<string, vector<string>> inf;
 
 void operator >> (const YAML::Node& node, tran& tran) {
   string in;
@@ -94,8 +95,7 @@ parserAutomatasFile(char *filename) {
   return *auts;
 }
 
-void
-readParser(automatas& inv) {
+void readParser(automatas& inv) {
   for(i_automatas it = inv.begin(); it != inv.end(); ++it) {
     //if(ids == (*it).getId()){
       automat automatss;
@@ -139,7 +139,7 @@ usage(const char* name) {
 
 void*
 checkStates(void* ) {
-  sem_wait(&mutex);
+  /*sem_wait(&mutex);
   cout << "Padre:  "<< getppid() << endl; 
   for(int i=0;i<ats.at(y).delte.size();i++) // loop will run n times (n=5) 
     { 
@@ -152,6 +152,7 @@ checkStates(void* ) {
     } 
     y++;
     sem_post(&mutex); 
+    */
 }
 
 string removeSpacess(string str)  
@@ -159,30 +160,61 @@ string removeSpacess(string str)
     str.erase(remove(str.begin(), str.end(), ' '), str.end()); 
     return str; 
 } 
+/*
+void imprimeAutomata(automat& aut){
+      cout << aut.id << endl;
+      cout << aut.description << endl;
+      cout << aut.start << endl;
+      if(m["cmd"] == "info"){
+    cout << "- msgtype: info" << endl;
+    cout << "  info:" << endl;
+    for(int i=0;i<ats.size();i++) {
+      if(info["automata"].at(i) == m["msg"]) {
+        cout << "  - automata: " << m["msg"] << endl;
+        cout << "    ppid: " << info["id"].at(i) << endl;
+        cout << "    nodes:" << endl;
+        for(int j=0;j<ats.at(i).delte.size();j++) {
+          cout << "     - node:" << ats.at(i).delte.at(j).node << endl;
+        }
+      } if(m["msg"] == "") {
+        cout << "  - automata: " << ats.at(i).id << endl;
+        cout << "    ppid: " << info["id"].at(i) << endl;
+        cout << "    nodes:" << endl;
+        for(int j=0;j<ats.at(i).delte.size();j++) {
+          cout << "     - node:" << ats.at(i).delte.at(j).node << endl;
+        }
+      }
+    }
+}*/
 
 void mensajesUsuario(string cmd, string msg){
-  cout << ats.size() << endl;
   if(cmd == "send" ){
 
   } else if (cmd == "info"){
-    
-    for(int i=0;i<ats.size();i++){
-      //cout << ats.at(i).id << endl;
-      //cout << "hola" << endl;
-      if (msg == ats.at(i).id){
-
-        cout << "gooooooooooooooooooooooola" << endl;
-
-        
-
+    cout << "- msgtype: info" << endl;
+    cout << "  info:" << endl;
+    for(int i=0;i<ats.size();i++) {
+      //if(inf["automata"].at(i) == msg) {
+      if (msg == ats.at(i).id) {
+          cout << "  - automata: " << msg << endl;
+          //cout << "    pid: " << inf["id"].at(i) << endl;
+          cout << "    nodes:" << endl;
+          for(int j=0;j<ats.at(i).delte.size();j++) {
+            cout << "     - node:" << ats.at(i).delte.at(j).node << endl;
+          }
+      } if(msg == "") {
+          cout << "  - automata: " << ats.at(i).id << endl;
+          //cout << "    pid: " << inf["id"].at(i) << endl;
+          cout << "    nodes:" << endl;
+          for(int j=0;j<ats.at(i).delte.size();j++) {
+            cout << "     - node:" << ats.at(i).delte.at(j).node << endl;
+          } 
       }
     }
-    
-
-
-  } else if (cmd == "stop") {
-
   }
+  else if (cmd == "stop") {
+
+    }
 }
 
 
